@@ -18,7 +18,7 @@ public class AWSClientIT {
 
   @Test
   public void listInstances(){
-    client.getInstances("");
+    client.getInstances("sa-east-1");
   }
 
   @Test
