@@ -34,12 +34,11 @@
                         $table.append('<tbody>');
 
                         $.each(this.instances, function() {
-                            $table.append('<tr><td>' + this.instanceId + '</td></tr>');
+                            $table.append('<tr><td><a href="instanceDetails/' + this.instanceId + '">' + this.instanceId + '</a></td></tr>');
                         });
                         $table.append('</tbody></table>');
                         $("#instances").append($table);
                     });
-
                 });
             });
         });

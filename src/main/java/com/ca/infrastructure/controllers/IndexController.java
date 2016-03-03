@@ -1,6 +1,7 @@
 package com.ca.infrastructure.controllers;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
@@ -10,8 +11,9 @@ public class IndexController {
     return "index";
   }
 
-  @RequestMapping("/")
-  String instanceDetails() {
+  @RequestMapping("/instanceDetails/{instanceId}")
+  String instanceDetails(@PathVariable String instanceId ) {
+    System.out.println(instanceId);
     return "instanceDetails";
   }
 }

@@ -2,6 +2,8 @@ package com.ca.infrastructure.cloud.client;
 
 import com.amazonaws.auth.AWSCredentials;
 import com.amazonaws.auth.PropertiesCredentials;
+import com.amazonaws.services.cloudwatch.model.GetMetricStatisticsResult;
+import com.amazonaws.services.cloudwatch.model.ListMetricsResult;
 import com.ca.infrastructure.cloud.client.aws.AWSClient;
 import org.junit.Before;
 import org.junit.Test;
@@ -25,4 +27,19 @@ public class AWSClientIT {
   public void listRegions(){
     client.getRegions();
   }
+
+  @Test
+  public void listMetrics() throws Exception {
+    ListMetricsResult result = client.listMetrics("eu-central-1");
+    System.out.println(result);
+
+  }
+  @Test
+  public void getMetrics() throws Exception {
+    GetMetricStatisticsResult result = client.getMetrics("eu-central-1", "i-ec42c850");
+    System.out.println(result);
+
+  }
+
+
 }
