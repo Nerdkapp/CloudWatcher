@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: Spring Boot Blank Project (from https://github.c
+ om/making/spring-boot-blank)
+Implementation-Version: 1.0-SNAPSHOT
+Built-By: lcoccia
+Implementation-Vendor-Id: com.cloudacademy
+Created-By: IntelliJ IDEA
+Build-Jdk: 1.8.0_65
+Main-Class: ${start-class}
+

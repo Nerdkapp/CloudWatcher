@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head> 
+    <title>Getting Started: Serving Web Content</title> 
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link href="/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/bower_components/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet" />
+</head>
+<script src="/bower_components/jquery/dist/jquery.min.js"></script>
+<script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="/bower_components/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+<body>
+    <select class="selectpicker">
+        <option>Mustard</option>
+        <option>Ketchup</option>
+        <option>Relish</option>
+    </select>
+
+
+<p class="bg-primary">...</p>
+    <p class="bg-success">...</p>
+    <p class="bg-info">...</p>
+    <p class="bg-warning">...</p>
+    <p class="bg-danger">...</p>
+</body>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $.ajax({
+                url: "regions"
+            }).then(function(data) {
+                alert(data);
+            });
+        });
+    </script>
+</html>
