@@ -12,7 +12,7 @@ function showCharts(metricsToShow){
     $(".chart").remove();
     $.each(metricsToShow, function(index, metric) {
 
-        $('#chartsContainer').append('<div class="row chart"><div class="col-md-9" id="{container}"> </div></div>'.replace("{container}", metric));
+        $('#chartsContainer').append('<div class="row chart"><div class="col-lg-12" id="{container}"> </div></div>'.replace("{container}", metric));
         showChart($("#region").val(), $("#instanceId").val(), metric) ;
     });
 

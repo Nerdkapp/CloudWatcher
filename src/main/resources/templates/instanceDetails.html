@@ -1,7 +1,5 @@
 <html xmlns:th="http://www.thymeleaf.org">
     <head>
-        <link href="/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
-        <link href="/bower_components/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet" />
         <script src="/bower_components/jquery/dist/jquery.min.js"></script>
         <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
         <script src="/bower_components/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
@@ -21,15 +19,21 @@
         <input type="hidden" th:value="${region}" id="region" />
         <input type="hidden" th:value="${instanceId}" id="instanceId"/>
 
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-12">
-                    <select class="selectpicker" id="metrics" multiple="multiple"/>
-                </div>
-            </div>
+        <div id="wrapper">
+            <div th:include="fragments/menu" />
 
-            <div class="row">
-                <div class="col-md-12" id="chartsContainer">
+            <!-- Page Content -->
+            <div id="page-content-wrapper">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <select class="selectpicker" id="metrics" multiple="multiple"/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12" id="chartsContainer">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
