@@ -30,16 +30,13 @@ public class AWSClientIT {
 
   @Test
   public void listMetrics() throws Exception {
-    ListMetricsResult result = client.listMetrics("eu-central-1");
+    ListMetricsResult result = client.getAvailableMetrics("eu-central-1", "i-70d346cc");
     System.out.println(result);
 
   }
   @Test
   public void getMetrics() throws Exception {
-    GetMetricStatisticsResult result = client.getMetrics("eu-central-1", "i-ec42c850");
+    GetMetricStatisticsResult result = client.getMetrics("eu-central-1", "i-b4d04508","CPUCreditUsage");
     System.out.println(result);
-
   }
-
-
 }

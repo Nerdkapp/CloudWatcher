@@ -20,4 +20,6 @@ public class InstancesResource {
   public @ResponseBody List<TaggedInstances> getInstancesGroupedByTag(@PathVariable String region){
     return cloudService.getInstancesGroupedByTags(region);
   }
+
+
 }

@@ -59,12 +59,12 @@ public class AWSClient {
     return instances;
   }
 
-  public ListMetricsResult listMetrics(String region){
+  public ListMetricsResult getAvailableMetrics(String region, String instance){
 
-    return newCloudWatchCLient(region).listMetrics();
+    return newCloudWatchCLient(region).listMetrics(new ListMetricsRequest().withDimensions(new DimensionFilter[]{new DimensionFilter().withName("InstanceId").withValue(instance)}));
   }
 
-  public GetMetricStatisticsResult getMetrics(String region, String name){
+  public GetMetricStatisticsResult getMetrics(String region, String name, String metric){
     Calendar cal = Calendar.getInstance();
     cal.setTime(new Date());
     cal.add(Calendar.HOUR, -1);
@@ -72,11 +72,11 @@ public class AWSClient {
 
     return newCloudWatchCLient(region).getMetricStatistics(new GetMetricStatisticsRequest().
             withDimensions(new Dimension().withName("InstanceId").withValue(name)).
-            withMetricName("CPUUtilization").
+            withMetricName(metric).
             withEndTime(new Date()).
             withStartTime(oneHourBack).
             withPeriod(60).
-            withStatistics(new Statistic[]{Statistic.SampleCount}).
+            withStatistics(new Statistic[]{Statistic.Average}).
             withNamespace("AWS/EC2"));
   }
 }
