@@ -1,3 +1,4 @@
+
 function fillMetricsList(region, instanceid){
     $.getJSON('/metrics/list/{region}/{instanceId}'.replace("{region}",region).replace("{instanceId}",instanceid), function (data) {
         $.each(data, function() {
@@ -12,13 +13,13 @@ function showCharts(metricsToShow){
     $.each(metricsToShow, function(index, metric) {
 
         $('#chartsContainer').append('<div class="row chart"><div class="col-md-9" id="{container}"> </div></div>'.replace("{container}", metric));
-        sample(metric);
+        showChart($("#region").val(), $("#instanceId").val(), metric) ;
     });
 
 }
 
-function sample(metric){
-    $.getJSON('/metrics/eu-central-1/i-70d346cc/{metric}'.replace("{metric}",metric), function (data) {
+function showChart(region, instanceId, metric){
+    $.getJSON('/metrics/{region}/{instanceId}/{metric}'.replace("{region}", region).replace("{instanceId}", instanceId).replace("{metric}",metric), function (data) {
 
         var series = [];
 
