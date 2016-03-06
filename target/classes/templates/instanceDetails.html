@@ -1,5 +1,6 @@
 <html xmlns:th="http://www.thymeleaf.org">
     <head>
+        <link href="/bower_components/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet" />
         <script src="/bower_components/jquery/dist/jquery.min.js"></script>
         <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
         <script src="/bower_components/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
@@ -27,12 +28,11 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-lg-12">
-                            <select class="selectpicker" id="metrics" multiple="multiple"/>
+                            <select class="selectpicker btn-primary" id="metrics" multiple="multiple" data-width="100%"/>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-md-12" id="chartsContainer">
-                        </div>
+                        <div class="col-md-12" id="chartsContainer" />
                     </div>
                 </div>
             </div>
