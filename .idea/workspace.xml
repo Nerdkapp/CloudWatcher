@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0bb11892-922e-4fbb-abb6-a329e1ae3b30" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/awsCredentials.properties" afterPath="$PROJECT_DIR$/src/main/resources/awsCredentials.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="CloudWatcher.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -62,7 +63,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/resources/awsCredentials.properties">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.026642984" vertical-offset="0" max-vertical-offset="563">
-              <caret line="1" column="10" selection-start-line="1" selection-start-column="10" selection-end-line="1" selection-end-column="10" />
+              <caret line="1" column="50" selection-start-line="1" selection-start-column="50" selection-end-line="1" selection-end-column="50" />
               <folding />
             </state>
           </provider>
@@ -827,12 +828,12 @@
       <workItem from="1456775258651" duration="6149000" />
       <workItem from="1456950980832" duration="6487000" />
       <workItem from="1457036964344" duration="6232000" />
-      <workItem from="1457190478522" duration="12753000" />
+      <workItem from="1457190478522" duration="13157000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40455000" />
+    <option name="totallyTimeSpent" value="40859000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="975" extended-state="6" />
@@ -1373,7 +1374,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/resources/awsCredentials.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.026642984" vertical-offset="0" max-vertical-offset="563">
-          <caret line="1" column="10" selection-start-line="1" selection-start-column="10" selection-end-line="1" selection-end-column="10" />
+          <caret line="1" column="50" selection-start-line="1" selection-start-column="50" selection-end-line="1" selection-end-column="50" />
           <folding />
         </state>
       </provider>
