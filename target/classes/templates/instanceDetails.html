@@ -10,8 +10,17 @@
             $(document).ready(function() {
                 fillMetricsList($('#region').val(),$('#instanceId').val());
 
+                var interval = setInterval(function () {
+                    showCharts($('#metrics').val());
+                }, 5*60*1000);
+
                 $('#metrics').on('change', function(){
                     showCharts($('#metrics').val());
+                    clearInterval(interval);
+
+                    interval = setInterval(function () {
+                        showCharts($('#metrics').val());
+                    }, 5*60*1000);
                 });
             });
         </script>

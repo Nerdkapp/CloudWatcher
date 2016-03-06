@@ -1,0 +1,11 @@
+/Users/lcoccia/git/cloudWatcher/CloudWatcher/src/main/java/com/ca/App.java
+/Users/lcoccia/git/cloudWatcher/CloudWatcher/src/main/java/com/ca/domain/cloud/CloudService.java
+/Users/lcoccia/git/cloudWatcher/CloudWatcher/src/main/java/com/ca/infrastructure/cloud/client/aws/AWSCloudService.java
+/Users/lcoccia/git/cloudWatcher/CloudWatcher/src/main/java/com/ca/infrastructure/controllers/ViewController.java
+/Users/lcoccia/git/cloudWatcher/CloudWatcher/src/main/java/com/ca/infrastructure/resources/InstancesResource.java
+/Users/lcoccia/git/cloudWatcher/CloudWatcher/src/main/java/com/ca/infrastructure/resources/RegionsResource.java
+/Users/lcoccia/git/cloudWatcher/CloudWatcher/src/main/java/com/ca/infrastructure/cloud/client/aws/AWSClient.java
+/Users/lcoccia/git/cloudWatcher/CloudWatcher/src/main/java/com/ca/domain/cloud/TaggedInstances.java
+/Users/lcoccia/git/cloudWatcher/CloudWatcher/src/main/java/com/ca/WebMVCConfig.java
+/Users/lcoccia/git/cloudWatcher/CloudWatcher/src/main/java/com/ca/AppConfig.java
+/Users/lcoccia/git/cloudWatcher/CloudWatcher/src/main/java/com/ca/infrastructure/resources/MetricsResource.java
