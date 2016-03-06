@@ -23,19 +23,35 @@
 
             $('#regions').on('change', function(){
                 var regionSelected = $(this).find("option:selected").val();
+                $("#instances").empty();
                 $.ajax({
                     url: "instances/" + regionSelected
                 }).then(function(instances) {
                     $.each(instances, function() {
-                        $table = $('<table class="table table-hover" id="'+ this.tags +'">');
+                        $table = $('<table class="table table-hover" id="'+ this.tags +'"></table>');
 
-                        $table.append('<thead><tr><th>' + this.tags + '</th></tr></thead>');
-                        $table.append('<tbody>');
-
-                        $.each(this.instances, function() {
-                            $table.append('<tr><td><a href="instanceDetails/' + regionSelected + '/' + this.instanceId + '">' + this.instanceId + '</a></td></tr>');
+                        var tags = this.tags.split(',');
+                        var tagHtml = "";
+                        $.each(tags, function(key, tag) {
+                            tagHtml += '<span class="label label-primary" style="margin-right: 2px;">' + tag + '</span>';
                         });
-                        $table.append('</tbody></table>');
+
+                        $table.append('<thead><tr class="active"><th colspan="5">Tags: ' + tagHtml + '</th></tr>' +
+                        '<tr><th>InstanceId</th><th>type</th><th>State</th><th>Public IP</th><th>Private IP</th></tr>' +
+                        '</thead>');
+
+                        $body = $('<tbody></tbody>');
+                        $.each(this.instances, function() {
+                            $body.append('<tr>' +
+                            '<td><a href="instanceDetails/' + regionSelected + '/' + this.instanceId + '">' + this.instanceId + '</a></td>' +
+                            '<td>' + this.instanceType + '</td>' +
+                            '<td>' + this.state.name + '</td>' +
+                            '<td>' + this.publicIpAddress + '</td>' +
+                            '<td>' + this.privateIpAddress + '</td>' +
+                            '</tr>');
+                        });
+                        $table.append($body);
+
                         $("#instances").append($table);
                     });
                 });
@@ -51,9 +67,23 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12">
-                        <select class="selectpicker" id="regions" />
+                        <div class="form-group">
+                            <label for="regions">AWS Region:</label>
+                            <select class="selectpicker" id="regions" />
+                        </div>
 
-                        <div id="instances">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                Instances
+                            </div>
+                            <!-- /.panel-heading -->
+                            <div class="panel-body" id="instances">
+                                <!--
+                                <table><thead><tr class="active"><th colspan="5">AA</th></tr>
+                                <tr><th>InstanceId</th><th>type</th><th>State</th><th>Public IP</th><th>Private IP</th></tr>
+                                </thead></table>
+                                -->
+                            </div>
                         </div>
                     </div>
                 </div>
